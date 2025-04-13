@@ -23,6 +23,8 @@ This cycle allows the system to iteratively improve its answers until a satisfac
 
 ## 📷 Flow Diagram
 
+![Flow Diagram](images/Plan_and_execute_flow.png)
+
 ---
 
 ## 🔁 Execution Flow
