@@ -53,12 +53,26 @@ This cycle allows the system to iteratively improve its answers until a satisfac
 
 ## 💬 Example Interaction
 
-**User:**  
-`"What is the hometown of the men's 2024 Australia open winner?"`
+**User Input:**  
+*What is the hometown of the men's 2024 Australia open winner?*
 
-**Planner Output:**  
-```python
-[
-  "Identify the winner of the 2024 Men's Australian Open.",
-  "Research online or check reliable sports databases to find the hometown of the identified winner."
-]
+**Planner Response:**  
+The planner returns two steps:  
+1. Identify the winner of the 2024 Men's Australian Open.  
+2. Research online or check reliable sports databases to find the hometown of the identified winner.
+
+**Executor – Step 1:**  
+The executor uses Tavily Search and responds:  
+*The winner of the 2024 Men's Australian Open is Jannik Sinner. He defeated Daniil Medvedev in the final with scores of 3–6, 3–6, 6–4, 6–4, 6–3 to claim his first major singles title.*
+
+**Replan Agent:**  
+Based on the result, the Replan Agent updates the plan with a more specific step:  
+*Research online or check reliable sports databases to find the hometown of Jannik Sinner.*
+
+**Executor – Step 2:**  
+The executor uses Tavily again and responds:  
+*Jannik Sinner's hometown is Sexten, located in the province of South Tyrol in Northern Italy.*
+
+**Final Replan:**  
+The Replan Agent finalizes the reasoning and returns:  
+*Jannik Sinner's hometown is Sexten, located in the province of South Tyrol in Northern Italy.*
